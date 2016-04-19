@@ -13,6 +13,7 @@
 		CC2F52011CC540F10008A223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2F51FF1CC540F10008A223 /* Main.storyboard */; };
 		CC2F52031CC540F10008A223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2F52021CC540F10008A223 /* Assets.xcassets */; };
 		CC2F52061CC540F10008A223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2F52041CC540F10008A223 /* LaunchScreen.storyboard */; };
+		CC78D89A1CC687BA00988996 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78D8991CC687BA00988996 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		CC2F52021CC540F10008A223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC2F52051CC540F10008A223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC2F52071CC540F10008A223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC78D8981CC687BA00988996 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		CC78D8991CC687BA00988996 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				CC2F51FC1CC540F10008A223 /* ViewController.h */,
 				CC2F51FD1CC540F10008A223 /* ViewController.m */,
 				CC2F51FF1CC540F10008A223 /* Main.storyboard */,
+				CC78D8981CC687BA00988996 /* CalculatorBrain.h */,
+				CC78D8991CC687BA00988996 /* CalculatorBrain.m */,
 				CC2F52021CC540F10008A223 /* Assets.xcassets */,
 				CC2F52041CC540F10008A223 /* LaunchScreen.storyboard */,
 				CC2F52071CC540F10008A223 /* Info.plist */,
@@ -152,6 +157,7 @@
 			files = (
 				CC2F51FE1CC540F10008A223 /* ViewController.m in Sources */,
 				CC2F51FB1CC540F10008A223 /* AppDelegate.m in Sources */,
+				CC78D89A1CC687BA00988996 /* CalculatorBrain.m in Sources */,
 				CC2F51F81CC540F10008A223 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +311,7 @@
 				CC2F520C1CC540F10008A223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
