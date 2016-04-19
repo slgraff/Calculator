@@ -10,24 +10,47 @@
 
 @implementation CalculatorBrain
 
-typedef enum
+-(instancetype)init
 {
-    OperatorTypeNone,
-    OperatorTypeAddition,
-    OperatorTypeSubtraction,
-    OperatorTypeMultiplication,
-    OperatorTypeDivision
-} OperatorType;
+    self = [super init];
+    if(self)
+    {
+        _operand1String = [[NSMutableString alloc]init];
+        _operand2String = [[NSMutableString alloc]init];
+        _operand1 = 0.0f;
+        _operand2 = 0.0f;
+        _operatorType = OperatorTypeNone;
+        _userIsTypingNumber = NO;
+    }
+    
+    return self;
+}
 
-@interface CalculatorBrain: NSObject
-
-@property (strong, nonatomic) NSMutableString *operandString;
-@property (strong, nonatomic) NSMutableString *operand2String;
-
-@property (assign) float operand1;
-@property (assign) float operand2;
-@property (assign) OperatorType operatorType;
-@property (assign) BOOL userIsTypingNumber;
-
+-(NSString*)executeOperationOnOperands{
+    if(![self.operand1String isEqualToString:@""] && ![self.operand2String isEqualToString:@""] && self.operatorType != OperatorTypeNone) {
+        float result;
+        switch(_operatorType) {
+            case OperatorTypeAddition:
+                result = self.operand1 + self.operand2;
+                break;
+            case OperatorTypeSubtraction:
+                result = self.operand1 - self.operand2;
+                break;
+            case OperatorTypeMultiplication:
+                result = self.operand1 * self.operand2;
+                break;
+            case OperatorTypeDivision:
+                result = self.operand1 / self.operand2;
+                break;
+                
+            default:
+                NSLog(@"Someone has hacked our calculator");
+                return @"HACKED!";
+                break;
+        }
+        return [NSString stringWithFormat:@"%f", result];
+    }
+    return @"invalid";
+}
 
 @end

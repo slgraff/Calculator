@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.displayLabel.text = @"0";
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,37 +41,56 @@
 
 
 -(IBAction)operandTapped:(UIButton *)sender {
-    if ([self.displayLabel.text isEqualToString:@"0"]) {
+    if ([self.displayLabel.text isEqualToString:@"0"] || brain.userIsTypingNumber) {
         self.displayLabel.text = sender.titleLabel.text;
-    } else {
-        
-        // If operand is . and displayContains . already
-        if ([sender.titleLabel.text isEqualToString:@"."] && [self.displayLabel.text containsString:@"."]) {
+        brain.userIsTypingNumber = NO;
+    } else if ([sender.titleLabel.text isEqualToString:@"."] && [self.displayLabel.text containsString:@"."]) {
             // Do nothing
-        } else {
-            self.displayLabel.text = [self.displayLabel.text stringByAppendingString:sender.titleLabel.text];
-        }
+    } else {
+        self.displayLabel.text = sender.titleLabel.text;
     }
 }
 
+
 -(IBAction)additionTapped:(UIButton *)sender {
+    if (!brain) {
+        brain = [[CalculatorBrain alloc]init];
+    }
     
+    brain.operatorType = OperatorTypeAddition;
+    brain.operand1String = [self.displayLabel.text mutableCopy];
+    brain.operand1 = [brain.operand1String floatValue];
+    // self.userIsTypingNumber = YES;
 }
     
 -(IBAction)subtractionTapped:(UIButton *)sender {
-    
+    brain.operatorType = OperatorTypeSubtraction;
+    brain.operand1String = [self.displayLabel.text mutableCopy];
+    brain.operand1 = [brain.operand1String floatValue];
 }
 
 -(IBAction)multiplicationTapped:(UIButton *)sender {
-    
+    brain.operatorType = OperatorTypeMultiplication;
+    brain.operand1String = [self.displayLabel.text mutableCopy];
+    brain.operand1 = [brain.operand1String floatValue];
 }
 
 -(IBAction)divisionTapped:(UIButton *)sender {
-    
+    brain.operatorType = OperatorTypeDivision;
+    brain.operand1String = [self.displayLabel.text mutableCopy];
+    brain.operand1 = [brain.operand1String floatValue];
 }
 
 -(IBAction)equalTapped:(UIButton *)sender {
+    brain.operand2String = [self.displayLabel.text mutableCopy];
+    brain.operand2 = [brain.operand2String floatValue];
     
+    // run operation
+    // set the label to be the result
+    self.displayLabel.text = [brain executeOperationOnOperands];
+    
+    // get a new brain
+    brain = [[CalculatorBrain alloc]init];
 }
 
 -(IBAction)allClearTapped:(UIButton *)sender{
