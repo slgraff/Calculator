@@ -29,8 +29,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJx-Ca-cUV">
                                 <rect key="frame" x="0.0" y="86" width="414" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-Zi-nhc">
-                                        <rect key="frame" x="1" y="1" width="99" height="94"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-Zi-nhc">
+                                        <rect key="frame" x="1" y="1" width="49" height="57"/>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" title="AC">
@@ -111,7 +111,7 @@
                                     <constraint firstAttribute="width" secondItem="0WG-bB-rLA" secondAttribute="height" multiplier="69:20" id="CIi-Qf-Pb9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTv-Li-Rnr">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTv-Li-Rnr">
                                 <rect key="frame" x="0.0" y="446" width="414" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6b-No-xGr">
@@ -147,12 +147,21 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="1,2,3">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HTv-Li-Rnr" secondAttribute="height" multiplier="69:20" id="b98-6g-hA8"/>
+                                    <constraint firstAttribute="height" constant="120" id="if0-Rh-3Fx"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="b98-6g-hA8"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXn-J1-9D8">
-                                <rect key="frame" x="0.0" y="566" width="414" height="120"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXn-J1-9D8">
+                                <rect key="frame" x="0.0" y="566" width="434" height="170"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqK-sa-mg4">
                                         <rect key="frame" x="208" y="14" width="100" height="100"/>
@@ -181,8 +190,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Evw-t0-7TG">
-                                <rect key="frame" x="0.0" y="338" width="414" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evw-t0-7TG">
+                                <rect key="frame" x="0.0" y="326" width="414" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-Ey-Lr1">
                                         <rect key="frame" x="2" y="0.0" width="100" height="100"/>
@@ -218,6 +227,9 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="2TM-n9-8Ez"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -226,21 +238,38 @@
                             <constraint firstItem="DJx-Ca-cUV" firstAttribute="top" secondItem="fuq-mR-mx5" secondAttribute="bottom" id="83x-xl-eOE"/>
                             <constraint firstItem="fuq-mR-mx5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="DTd-eY-WY5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Evw-t0-7TG" secondAttribute="trailing" constant="-20" id="Dx5-xu-G80"/>
+                            <constraint firstItem="HTv-Li-Rnr" firstAttribute="top" secondItem="Evw-t0-7TG" secondAttribute="bottom" id="F1x-z5-1w5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HTv-Li-Rnr" secondAttribute="trailing" constant="-20" id="Hde-6V-Ucu"/>
+                            <constraint firstItem="Evw-t0-7TG" firstAttribute="top" secondItem="0WG-bB-rLA" secondAttribute="bottom" id="JUP-CV-QBk"/>
+                            <constraint firstItem="mXn-J1-9D8" firstAttribute="top" secondItem="HTv-Li-Rnr" secondAttribute="bottom" id="PJH-va-NMX"/>
                             <constraint firstItem="0WG-bB-rLA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="U6T-Lc-nBs"/>
+                            <constraint firstItem="mXn-J1-9D8" firstAttribute="top" secondItem="HTv-Li-Rnr" secondAttribute="bottom" id="VV6-r0-gDh"/>
                             <constraint firstItem="HTv-Li-Rnr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Ywf-yd-dfz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Evw-t0-7TG" secondAttribute="trailing" constant="-20" id="b3N-zn-5w4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mXn-J1-9D8" secondAttribute="bottom" id="cIa-RJ-QN6"/>
                             <constraint firstItem="0WG-bB-rLA" firstAttribute="top" secondItem="DJx-Ca-cUV" secondAttribute="bottom" id="dYH-ix-K8m"/>
                             <constraint firstItem="DJx-Ca-cUV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ebf-N3-KFL"/>
+                            <constraint firstAttribute="trailing" secondItem="mXn-J1-9D8" secondAttribute="trailing" constant="-20" id="frT-jb-SEA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0WG-bB-rLA" secondAttribute="trailing" constant="-20" id="h2I-Mu-8yf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fuq-mR-mx5" secondAttribute="trailing" constant="-20" id="ifP-gO-5PW"/>
                             <constraint firstItem="Evw-t0-7TG" firstAttribute="top" secondItem="0WG-bB-rLA" secondAttribute="bottom" id="j6v-fn-BdT"/>
                             <constraint firstItem="HTv-Li-Rnr" firstAttribute="top" secondItem="Evw-t0-7TG" secondAttribute="bottom" id="jZu-pX-0jX"/>
+                            <constraint firstItem="mXn-J1-9D8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mKh-z7-Xta"/>
                             <constraint firstItem="Evw-t0-7TG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="q5y-3j-5y0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DJx-Ca-cUV" secondAttribute="trailing" constant="-20" id="qIt-SK-gsV"/>
                             <constraint firstItem="fuq-mR-mx5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="rRJ-2W-Ug1"/>
                             <constraint firstItem="Evw-t0-7TG" firstAttribute="top" secondItem="0WG-bB-rLA" secondAttribute="bottom" constant="10" id="tWM-PP-Fka"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1fK-b7-hI8"/>
+                                <exclude reference="b3N-zn-5w4"/>
+                                <exclude reference="j6v-fn-BdT"/>
+                                <exclude reference="tWM-PP-Fka"/>
+                                <exclude reference="jZu-pX-0jX"/>
+                                <exclude reference="PJH-va-NMX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
