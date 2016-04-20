@@ -48,7 +48,7 @@
                 return @"HACKED!";
                 break;
         }
-        return [NSString stringWithFormat:@"%f", result];
+        return [NSString stringWithFormat:@"%.2f", result];
     }
     return @"invalid";
 }
