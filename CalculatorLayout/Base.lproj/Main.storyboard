@@ -101,7 +101,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="divisionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYd-gG-sCH"/>
+                                            <action selector="multiplicationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJU-Z1-bEU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfp-DL-DIW">
